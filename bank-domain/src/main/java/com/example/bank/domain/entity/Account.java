@@ -7,6 +7,9 @@ import com.example.bank.exception.MoneyAmoutNotNullException;
 import com.example.bank.types.*;
 import lombok.Data;
 
+/**
+ * 同一个账号的转账
+ */
 @Data
 public class Account {
 
