@@ -5,7 +5,9 @@ import com.example.bank.exception.InsufficientFundsException;
 import com.example.bank.exception.InvalidCurrencyException;
 import com.example.bank.exception.MoneyAmoutNotNullException;
 import com.example.bank.types.*;
+import lombok.Data;
 
+@Data
 public class Account {
 
     private AccountId id;
@@ -16,53 +18,6 @@ public class Account {
 
     private Currency currency;
 
-    public AccountId getId() {
-        return id;
-    }
-
-    public void setId(AccountId id) {
-        this.id = id;
-    }
-
-    public AccountNumber getAccountNumber() {
-        return accountNumber;
-    }
-
-    public void setAccountNumber(AccountNumber accountNumber) {
-        this.accountNumber = accountNumber;
-    }
-
-    public UserId getUserId() {
-        return userId;
-    }
-
-    public void setUserId(UserId userId) {
-        this.userId = userId;
-    }
-
-    public Money getAvailable() {
-        return available;
-    }
-
-    public void setAvailable(Money available) {
-        this.available = available;
-    }
-
-    public Money getDailyLimit() {
-        return dailyLimit;
-    }
-
-    public void setDailyLimit(Money dailyLimit) {
-        this.dailyLimit = dailyLimit;
-    }
-
-    public Currency getCurrency() {
-        return currency;
-    }
-
-    public void setCurrency(Currency currency) {
-        this.currency = currency;
-    }
 
     // 转出
     public void withdraw(Money money) throws Exception, DailyLimitExceededException {
